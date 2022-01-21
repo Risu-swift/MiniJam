@@ -30,19 +30,10 @@ public class Rockspawner : MonoBehaviour
         {
             Vector2 pos = new Vector2(Random.Range(-spawnArea.bounds.extents.x, spawnArea.bounds.extents.x),
                 Random.Range(-spawnArea.bounds.extents.y, spawnArea.bounds.extents.y));
-            foreach (var rock in rockInstances)
-            {
-                int diff = rock.GetComponent<BoxCollider2D>().size - pos;
-            }
+         
             rockInstances.Add(Instantiate(rockPrefab[Random.Range(0,rockPrefab.Count)],pos,transform.rotation));
         }
     }
 
-    public GameObject HealthOrbSpawn()
-    {
-        foreach (var rock in rockInstances)
-        {
-            rock.GetComponent<BoxCollider2D>()
-        }
-    }
+
 }
