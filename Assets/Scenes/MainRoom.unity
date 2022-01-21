@@ -346,6 +346,9 @@ MonoBehaviour:
   minRocks: 3
   maxRocks: 10
   spawnArea: {fileID: 974144604}
+  currentRocks: 0
+  HealthOrb: {fileID: 0}
+  rockInstances: []
   rockPrefab:
   - {fileID: 2877173005345918728, guid: 2dee5b1b08ff6564e8b53c02610bccbe, type: 3}
   - {fileID: 2877173005345918728, guid: 3e633ff6f393e5e4fbfaf8359b20c14e, type: 3}
