@@ -61,9 +61,8 @@ public class LevelManager : MonoBehaviour
         for (int i = 0; i < maxElements - currentRocks; i++)
         {
             Vector2 pos = getRandomPos();
-
             GameObject temp = Instantiate(EnemeyList[Random.Range(0, EnemeyList.Count)], pos, transform.rotation);
-            temp.GetComponent<EnemyIA>().target = Player;
+            //temp.GetComponent<EnemyIA>().target = Player;
         }
 
     }
