@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
 
     public Sprite[] Sprites;
     public SpriteRenderer Srender;
+
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -87,12 +89,12 @@ public class PlayerMovement : MonoBehaviour
 
     public void ApplyDamage(float d)
     {
+        animator.SetTrigger("Hit");
         Live -= d;
         if(Live <= 0)
         {
             GameOver();
         }
-
         ChangeSprite();
     }
 
@@ -129,4 +131,6 @@ public class PlayerMovement : MonoBehaviour
     {
         Debug.Log("GameOver");
     }
+
+   
 }
