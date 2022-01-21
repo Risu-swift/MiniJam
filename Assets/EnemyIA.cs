@@ -33,21 +33,22 @@ public class EnemyIA : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    private void OnTriggerEnter2D(Collider2D col)
+    public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (col.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
-            col.gameObject.GetComponent<PlayerMovement>().ApplyDamage(damage);
+            collision.gameObject.GetComponent<PlayerMovement>().ApplyDamage(damage);
         }
 
-        if (col.gameObject.tag == "Bullet")
+        if (collision.gameObject.tag == "Bullet")
         {
-            ApplyDamage(col.gameObject.GetComponent<Bullet>().Damage);
-            Destroy(col.gameObject);
+            ApplyDamage(collision.gameObject.GetComponent<Bullet>().Damage);
+            Destroy(collision.gameObject);
             hit = true;
             SpriteBlinkingEffect();
         }
     }
+   
 
     private void SpriteBlinkingEffect()
     {

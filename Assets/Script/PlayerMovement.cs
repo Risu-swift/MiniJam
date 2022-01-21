@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float Speed;
     public float Live;
     public float TotalLive;
+    public float ShootDamage;
 
     public GameObject RotationManager;
     public GameObject Bullet;
@@ -79,7 +80,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void Shoot()
     {
+        ApplyDamage(ShootDamage);
         Instantiate(Bullet, this.transform.position, RotationManager.transform.rotation);
+        
     }
 
     public void ApplyDamage(float d)
