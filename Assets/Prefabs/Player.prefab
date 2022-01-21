@@ -130,8 +130,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 3
   Live: 10
+  TotalLive: 0
+  ShootDamage: 1
   RotationManager: {fileID: 6455376174050484625}
   Bullet: {fileID: 8695119550602751284, guid: d90f60404c1952f4cb817084adbc0261, type: 3}
+  Sprites:
+  - {fileID: -7817302380665883859, guid: a61fa0ec65feefe4da955568ef5fb34c, type: 3}
+  - {fileID: -5688636824271482015, guid: a61fa0ec65feefe4da955568ef5fb34c, type: 3}
+  - {fileID: 6220810744342307962, guid: a61fa0ec65feefe4da955568ef5fb34c, type: 3}
+  - {fileID: 1494118893449588421, guid: a61fa0ec65feefe4da955568ef5fb34c, type: 3}
+  - {fileID: 7761231778155698044, guid: a61fa0ec65feefe4da955568ef5fb34c, type: 3}
+  Srender: {fileID: 6455376174439706137}
 --- !u!50 &6455376174439706138
 Rigidbody2D:
   serializedVersion: 4
@@ -140,19 +149,19 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6455376174439706143}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &6455376174439706139
 BoxCollider2D:
   m_ObjectHideFlags: 0
