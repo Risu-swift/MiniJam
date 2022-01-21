@@ -6,19 +6,24 @@ public class PlayerMovement : MonoBehaviour
 {
     public float Speed;
     public float Live;
+    public float TotalLive;
 
     public GameObject RotationManager;
     public GameObject Bullet;
+
+    public Sprite[] Sprites;
+    public SpriteRenderer Srender;
     // Start is called before the first frame update
     void Start()
     {
-
+        TotalLive = Live;
     }
 
     // Update is called once per frame
     void Update()
     {
         CheckMovement();
+
     }
 
     public void CheckMovement()
@@ -84,8 +89,39 @@ public class PlayerMovement : MonoBehaviour
         {
             GameOver();
         }
+
+        ChangeSprite();
     }
 
+    public void ChangeSprite()
+    {
+        float factor = TotalLive / 4;
+        //Full Live
+        if((Live <= TotalLive) && (Live > factor * 3))
+        {
+            Srender.sprite = Sprites[0];
+        }
+
+        //75% Live
+        else if ((Live >= factor * 3) && (Live > factor * 2))
+        {
+            Srender.sprite = Sprites[1];
+        }
+        //50% Live
+        else if((Live >= factor * 2) && (Live > factor))
+        {
+            Srender.sprite = Sprites[2];
+        }
+        //25% Live
+        else if((Live >= factor) && (Live > 0))
+        {
+            Srender.sprite = Sprites[3];
+        }
+        else
+        {
+            Srender.sprite = Sprites[4];
+        }
+    }
     public void GameOver()
     {
         Debug.Log("GameOver");

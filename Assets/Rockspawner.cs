@@ -42,7 +42,7 @@ public class Rockspawner : MonoBehaviour
     {
         foreach (var rock in rockInstances)
         {
-            rock.GetComponent<BoxCollider2D>()
+            rock.GetComponent<BoxCollider2D>();
         }
     }
 }
