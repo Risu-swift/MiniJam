@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float TotalLive;
     public float ShootDamage;
 
+    public Rigidbody2D rb;
     public GameObject RotationManager;
     public GameObject Bullet;
 
@@ -16,15 +18,26 @@ public class PlayerMovement : MonoBehaviour
     public SpriteRenderer Srender;
 
     public Animator animator;
+
+    NavMeshAgent agent;
+
+    public AudioClip[] Clips;
+    public AudioSource audio;
     // Start is called before the first frame update
     void Start()
     {
+        audio = gameObject.GetComponent<AudioSource>();
+        rb = gameObject.GetComponent<Rigidbody2D>();
+        agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
         TotalLive = Live;
     }
 
     // Update is called once per frame
     void Update()
     {
+        agent.Warp(transform.position);
         CheckMovement();
 
     }
@@ -82,14 +95,16 @@ public class PlayerMovement : MonoBehaviour
 
     public void Shoot()
     {
-        ApplyDamage(ShootDamage);
+        audio.clip = Clips[Random.Range(0, Clips.Length)];
+        audio.Play();
+        ApplyDamage(ShootDamage,false);
         Instantiate(Bullet, this.transform.position, RotationManager.transform.rotation);
         
     }
 
-    public void ApplyDamage(float d)
+    public void ApplyDamage(float d, bool E)
     {
-        animator.SetTrigger("Hit");
+        if(E) animator.SetTrigger("Hit");
         Live -= d;
         if(Live <= 0)
         {

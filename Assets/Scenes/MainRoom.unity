@@ -215,7 +215,7 @@ GameObject:
   m_Component:
   - component: {fileID: 949313867}
   - component: {fileID: 949313868}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Walls_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +353,8 @@ MonoBehaviour:
   - {fileID: 2877173005345918728, guid: 2dee5b1b08ff6564e8b53c02610bccbe, type: 3}
   - {fileID: 2877173005345918728, guid: 3e633ff6f393e5e4fbfaf8359b20c14e, type: 3}
   EnemeyList:
-  - {fileID: 523770800674631765, guid: 592a8fd682498354184897890b1d66f8, type: 3}
+  - {fileID: 8310867415114843686, guid: 5d659678cd046ee4e85352e04d46febb, type: 3}
+  Apath: {fileID: 8517454127007301076, guid: 60cd5e08689965a429f0444a00f98d93, type: 3}
 --- !u!4 &974144606
 Transform:
   m_ObjectHideFlags: 0
@@ -466,6 +467,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6455376174439706139, guid: 0028d04d6d2e87f4aae8668f8c300d4c, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6455376174439706142, guid: 0028d04d6d2e87f4aae8668f8c300d4c, type: 3}
+      propertyPath: Speed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6455376174439706143, guid: 0028d04d6d2e87f4aae8668f8c300d4c, type: 3}
       propertyPath: m_Name
       value: Player
@@ -482,7 +491,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1986075781}
   - component: {fileID: 1986075782}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Walls_up
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -564,7 +573,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2079039535}
   - component: {fileID: 2079039536}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Walls_down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -729,7 +738,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2136181847}
   - component: {fileID: 2136181848}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Walls_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
