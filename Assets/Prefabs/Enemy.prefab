@@ -48,11 +48,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  hit: 0
+  Knock: 0
   damage: 3
   Live: 5
+  KnockTime: 0.1
+  KnockRemindTime: 0
+  KnockDistance: 1
+  Speed: 0
   SpawnTransform: {fileID: 0}
   gm: {fileID: 0}
+  rb: {fileID: 0}
 --- !u!61 &8310867415114843683
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -93,7 +98,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1000
   m_LinearDrag: 0
-  m_AngularDrag: 0
+  m_AngularDrag: 3
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
