@@ -2166,18 +2166,18 @@ PrefabInstance:
     - target: {fileID: 443288269999216013, guid: e12a6678c54b1b041a34a11ab08e983c, type: 3}
       propertyPath: m_NavMeshData
       value: 
-      objectReference: {fileID: 23800000, guid: 0261f67cfdabcc54b9744d249f304ecd, type: 2}
+      objectReference: {fileID: 23800000, guid: 695716995cbcbf84a91f92fcb45706bb, type: 2}
     - target: {fileID: 443288269999216013, guid: e12a6678c54b1b041a34a11ab08e983c, type: 3}
       propertyPath: m_CompressBounds
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 443288269999216013, guid: e12a6678c54b1b041a34a11ab08e983c, type: 3}
       propertyPath: m_OverrideTileSize
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 443288269999216013, guid: e12a6678c54b1b041a34a11ab08e983c, type: 3}
       propertyPath: m_OverrideVoxelSize
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5909779730469958496, guid: e12a6678c54b1b041a34a11ab08e983c, type: 3}
       propertyPath: m_RootOrder
@@ -2230,6 +2230,6 @@ PrefabInstance:
     - target: {fileID: 9018182982410645084, guid: e12a6678c54b1b041a34a11ab08e983c, type: 3}
       propertyPath: m_NavMeshData
       value: 
-      objectReference: {fileID: 23800000, guid: 035ba5f4c71445b4fa4b802f8a179c6f, type: 2}
+      objectReference: {fileID: 23800000, guid: 45aba000eeb966d4d8fcd70945d8fb87, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e12a6678c54b1b041a34a11ab08e983c, type: 3}
