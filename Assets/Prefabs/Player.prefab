@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 6455376174439706142}
   - component: {fileID: 6455376174439706138}
   - component: {fileID: 6455376174439706139}
+  - component: {fileID: 562218424}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -141,6 +142,7 @@ MonoBehaviour:
   - {fileID: 1494118893449588421, guid: a61fa0ec65feefe4da955568ef5fb34c, type: 3}
   - {fileID: 7761231778155698044, guid: a61fa0ec65feefe4da955568ef5fb34c, type: 3}
   Srender: {fileID: 6455376174439706137}
+  animator: {fileID: 562218424}
 --- !u!50 &6455376174439706138
 Rigidbody2D:
   serializedVersion: 4
@@ -188,3 +190,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.02, y: 1.97}
   m_EdgeRadius: 0
+--- !u!95 &562218424
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6455376174439706143}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6fb7a78475c7ffa4eb8fba69790aa6eb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

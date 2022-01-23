@@ -19,12 +19,14 @@ public class LevelManager : MonoBehaviour
     public List<GameObject> rockPrefab;
     public List<GameObject> EnemeyList;
 
+    public GameObject Apath;
     private void Start()
     {
         rockInstances = new List<GameObject>();
         ChangeRocks();
         SpawnHealthOrb();
         SpawnEnemy();
+        SpawnAPath();
     }
     
     public void ChangeRocks()
@@ -71,6 +73,11 @@ public class LevelManager : MonoBehaviour
     {
         return new Vector2(Random.Range(-spawnArea.bounds.extents.x, spawnArea.bounds.extents.x),
             Random.Range(-spawnArea.bounds.extents.y, spawnArea.bounds.extents.y));
+    }
+
+    public void SpawnAPath()
+    {
+        Instantiate(Apath);
     }
 
 }
